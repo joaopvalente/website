@@ -1,0 +1,170 @@
+<!DOCTYPE html> <html xmlns="http://www.w3.org/1999/xhtml" lang="en"> 
+<head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"><style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body
+    {    
+        font-family: 'Noto Sans', sans-serif;
+        background:#FFFFFF;
+        color:#303030;      
+    }
+    
+    #site_body{
+        max-width:620px; 
+        background:#FFFFFF;
+        scroll-behavior: smooth;
+        text-align:justify;
+        margin-left:auto; margin-right: auto;
+    }
+    
+    .section_header{
+        font-size:min(4.0vmax, 22px); 
+        font-variant:normal;
+        font-weight: 200; 
+        margin-bottom: min(2vmax, 10px); 
+    }
+    
+    .header_text{
+        margin-left:min(2vmax, 12px);
+        margin-right:min(2vmax,12px);
+        font-size: min(3vmax,15px);
+        line-height:min(4vmax, 22px);
+    }
+    
+    .body_text{
+        margin-left:min(2vmax,12px);
+        margin-right:min(2vmax,12px);
+        font-size:min(3vmax,15px); 
+        margin-bottom: min(1.3vmax, 5px); 
+        line-height:min(4.0vmax, 22px);
+    }
+
+
+    .link_main { color: #0f5192; } 
+    .link_main:hover { color: #BEBEBE; }
+    
+    a:link {
+        text-decoration: none;
+    }
+
+    .hidden { display: none; }
+    .unhidden { 
+        display: block;     
+        margin-right: min(2vmax, 12px); 
+        margin-left: min(2vmax, 12px); 
+        font-size: min(3vmax, 15px); 
+        padding: min(1.1vmax, 5px); 
+        line-height: min(4vmax, 22px);
+        background:hsl(212, 76%, 97%);
+        border-radius: min(1vmax, 5px); 
+        
+        } 
+</style>
+
+<script>
+    function unhide(abstract) {
+        var item = document.getElementById(abstract);
+        var link = document.getElementById(abstract.concat("_link"));
+
+        if (item) {
+            if (item.className=='hidden'){
+              gtag('event', 'click', {
+                'event_category': 'outbound',
+                'event_label': item.id,
+              });
+              item.className = 'unhidden';
+              link.innerHTML = "Abstract [-]";        
+            }
+            else {
+                item.className = 'hidden';
+                link.innerHTML = ("Abstract [+]");
+            }
+        }
+    }
+    
+    var getOutboundLink = function(url) {
+      gtag('event', 'click', {
+        'event_category': 'outbound',
+        'event_label': url,
+        'transport_type': 'beacon'
+      });
+    }
+</script> 
+
+
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-112265607-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-112265607-1');
+</script>
+<script src="https://ipmeta.io/plugin.js"></script>
+<script>
+    provideGtagPlugin({
+        apiKey: 'd6fbcea1445a802002b3b80cc2918192813307cf0ee584b38739511d465b30360113f288956f0d7a',
+        serviceProvider: 'dimension1',
+        networkDomain: 'dimension2',
+        networkType: 'dimension3',
+    }); 
+</script>
+
+
+
+<link rel="icon" type="image/png" href="favicon.png" />
+<title>Joao Paulo Valente</title> 
+<meta name="description" content="Joao Paulo Valente — Ph.D. candidate in Economics at Yale University."/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head> 
+    <body>
+        <div id='site_body'>
+            <p style="font-size: min(4.5vmax, 28px); font-variant:normal;font-weight: 200; margin-bottom:10px; text-align:center">
+                Joao Paulo Valente
+            </p>
+            <hr/>
+            
+            <p style="text-align:center"><img src="picutre.png" alt="Headshot"></p>
+         
+            <p class="header_text">I am a PhD candidate in Economics at Yale University. My research is in finance, with a focus on behavioral finance and asset pricing. I am also interested in international finance. 
+            Prior to my doctoral studies, I was a macroeconomic researcher at Bahia Asset Management.
+            I will be available for interviews at the 2022 ASSA Meeting. </p> 
+            <p class="header_text"><a class="link_main" href="cv.pdf" target="_blank" onclick="getOutboundLink('cv.pdf'); return true;">Curriculum Vitae</a> &#160; </p>
+
+         
+            <hr/>
+            <p class="section_header">
+                Working Papers
+            </p>
+     
+            <p class="body_text"> 
+                <b>The Role of Beliefs in Asset Prices: Evidence from Exchange Rates</b><br/>
+            (with Kaushik Vasudevan and Tianhao Wu)<br/>
+            <a class="link_main" href="javascript:unhide(&#39;abstract_exchange_rate&#39;);" id="abstract_exchange_rate_link">Abstract [+]</a> | <a class="link_main" href="papers/vvw_exchange_rate_expectations.pdf" target="_blank" onclick="getOutboundLink('papers/vvw_exchange_rate_expectations.pdf'); return true;">PDF</a> | <a class="link_main" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3872077" target="_blank" onclick="getOutboundLink('SSRN Exchange Rate Expectations'); return true;">SSRN</a>
+            <div id="abstract_exchange_rate" class="hidden">
+                Motivated by evidence of systematic forecast errors by market participants and professional forecasters, we construct a model of exchange rate determination where short-lived investors each (1) receive noisy private signals about the future path of interest rate differentials between the US and other countries and (2) overestimate the persistence of interest rate differentials. Our model is able to explain the forward premium puzzle, a well-known failure of the uncovered interest rate parity condition implied by traditional models (UIP), in a manner consistent with the survey evidence, in addition to a number of additional puzzles that existing models have struggled to simultaneously explain. These include the initial underreaction and delayed overreaction of currencies in response to monetary news; positive short-horizon and negative long-horizon autocorrelations of currency excess returns; and the lower return predictability of interest rate differentials for UIP trades implemented with longer maturity bonds. Our model is also useful for understanding the strong relationship between survey-based measures of macroeconomic news and exchange rates despite the weak relationship between macroeconomic fundamentals and exchange rates, the persistence of subjective beliefs, and the seeming reversal of the failure of UIP in recent years. Our results highlight the important role that investors’ beliefs may play in exchange rate behavior.           </div>
+            <br/>
+            
+            <p class="body_text"> 
+                <b>Tail Risk Exposures of Hedge Funds: Evidence From Unique Brazilian Data</b><br/>
+            (with Caio Almeida and Marcelo Fernandes)<br/>
+            <a class="link_main" href="javascript:unhide(&#39;abstract_exchange_rate&#39;);" id="abstract_exchange_rate_link">Abstract [+]</a> | <a class="link_main" href="papers/vvw_exchange_rate_expectations.pdf" target="_blank" onclick="getOutboundLink('papers/vvw_exchange_rate_expectations.pdf'); return true;">PDF</a> | <a class="link_main" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3386376" target="_blank" onclick="getOutboundLink('SSRN Tail Risk'); return true;">SSRN</a>
+            <div id="abstract_exchange_rate" class="hidden">
+                This paper examines tail risk in the Brazilian hedge fund industry. We rely on a unique data set of daily returns for every hedge fund in Brazil, dead or alive. By employing the universe of hedge funds, we ensure the absence of selection, survivorship, and instant history biases. We estimate tail risk measures based on the cross-section of both equity and hedge-fund returns. We consider three tail risk measures. The first extracts a tail risk measure assuming that the tail of the cross-section distribution has a power law representation, whereas the second and third rely on the expected shortfall of the cross-section distribution under the physical and risk-neutral measures, respectively. We find that the tail risk estimates are very different not only across asset classes (equity vs hedge fund), but also across probability measures (physical vs risk neutral). More interestingly, we also show that, although the hedge fund industry in Brazil seems to exhibit more exposure to equity tail risk, hedge fund tail risk entails higher predictive ability to performance both over time and cross-sectionally.            </div>
+            <br/>        
+            <hr/>
+            <p class="section_header">
+                Contact
+            </p>
+            <p class="body_text">Email:<br/>joaopaulo.valente@yale.edu <br/><br/>
+                Mailing: <br/> Department of Economics, Yale University <br/> New Haven, CT 06520-8268
+            </p>
+         
+        </div>
+    </body> 
+</html>
