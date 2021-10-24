@@ -2,151 +2,190 @@
 <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
 
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"><style>
-    html {
-        scroll-behavior: smooth;
-    }
+	html {
+		scroll-behavior: smooth;
+	}
 
-    body
-    {    
-        font-family: 'Noto Sans', sans-serif;
-        background:#FFFFFF;
-        color:#303030;      
-    }
-    
-    #site_body{
-        max-width:620px; 
-        background:#FFFFFF;
-        scroll-behavior: smooth;
-        text-align:justify;
-        margin-left:auto; margin-right: auto;
-    }
-    
-    .section_header{
-        font-size:min(4.0vmax, 22px); 
-        font-variant:normal;
-        font-weight: 200; 
-        margin-bottom: min(2vmax, 10px); 
-    }
-    
-    .header_text{
-        margin-left:min(2vmax, 12px);
-        margin-right:min(2vmax,12px);
-        font-size: min(3vmax,15px);
-        line-height:min(4vmax, 22px);
-    }
-    
-    .body_text{
-        margin-left:min(2vmax,12px);
-        margin-right:min(2vmax,12px);
-        font-size:min(3vmax,15px); 
-        margin-bottom: min(1.3vmax, 5px); 
-        line-height:min(4.0vmax, 22px);
-    }
+	body
+	{    
+		font-family: 'Noto Sans', sans-serif;
+		background:#FFFFFF;
+		color:#303030;		
+	}
+	
+	#site_body{
+		max-width:620px; 
+		background:#FFFFFF;
+		scroll-behavior: smooth;
+		text-align:justify;
+		margin-left:auto; margin-right: auto;
+	}
+	
+	.section_header{
+		font-size:min(4.0vmax, 22px); 
+		font-variant:normal;
+		font-weight: 200; 
+		margin-bottom: min(2vmax, 10px); 
+	}
+	
+	.header_text{
+		margin-left:min(2vmax, 12px);
+		margin-right:min(2vmax,12px);
+		font-size: min(3vmax,15px);
+		line-height:min(4vmax, 22px);
+	}
+	
+	.body_text{
+		margin-left:min(2vmax,12px);
+		margin-right:min(2vmax,12px);
+		font-size:min(3vmax,15px); 
+		margin-bottom: min(1.3vmax, 5px); 
+		line-height:min(4.0vmax, 22px);
+	}
 
 
-    .link_main { color: #0f5192; } 
-    .link_main:hover { color: #BEBEBE; }
-    
-    a:link {
-        text-decoration: none;
-    }
+	.link_main { color: #0f5192; } 
+	.link_main:hover { color: #BEBEBE; }
+	
+	a:link {
+		text-decoration: none;
+	}
 
-    .hidden { display: none; }
-    .unhidden { 
-        display: block;     
-        margin-right: min(2vmax, 12px); 
-        margin-left: min(2vmax, 12px); 
-        font-size: min(3vmax, 15px); 
-        padding: min(1.1vmax, 5px); 
-        line-height: min(4vmax, 22px);
-        background:hsl(212, 76%, 97%);
-        border-radius: min(1vmax, 5px); 
-        
-        } 
+	.hidden { display: none; }
+	.unhidden { 
+		display: block; 	
+		margin-right: min(2vmax, 12px); 
+		margin-left: min(2vmax, 12px); 
+		font-size: min(3vmax, 15px); 
+		padding: min(1.1vmax, 5px); 
+		line-height: min(4vmax, 22px);
+		background:hsl(212, 76%, 97%);
+		border-radius: min(1vmax, 5px); 
+		
+		} 
 </style>
 
 <script>
-    function unhide(abstract) {
-        var item = document.getElementById(abstract);
-        var link = document.getElementById(abstract.concat("_link"));
+	function unhide(abstract) {
+		var item = document.getElementById(abstract);
+		var link = document.getElementById(abstract.concat("_link"));
 
-        if (item) {
-            if (item.className=='hidden'){
-              gtag('event', 'click', {
-                'event_category': 'outbound',
-                'event_label': item.id,
-              });
-              item.className = 'unhidden';
-              link.innerHTML = "Abstract [-]";        
-            }
-            else {
-                item.className = 'hidden';
-                link.innerHTML = ("Abstract [+]");
-            }
-        }
-    }
-    
-    var getOutboundLink = function(url) {
-      gtag('event', 'click', {
-        'event_category': 'outbound',
-        'event_label': url,
-        'transport_type': 'beacon'
-      });
-    }
+		if (item) {
+			if (item.className=='hidden'){
+			  gtag('event', 'click', {
+				'event_category': 'outbound',
+				'event_label': item.id,
+			  });
+			  item.className = 'unhidden';
+			  link.innerHTML = "Abstract [-]";		  
+			}
+			else {
+				item.className = 'hidden';
+				link.innerHTML = ("Abstract [+]");
+			}
+		}
+	}
+	
+	var getOutboundLink = function(url) {
+	  gtag('event', 'click', {
+		'event_category': 'outbound',
+		'event_label': url,
+		'transport_type': 'beacon'
+	  });
+	}
 </script> 
+
+
+<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-112265607-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-112265607-1');
+</script>
+<script src="https://ipmeta.io/plugin.js"></script>
+<script>
+	provideGtagPlugin({
+		apiKey: 'd6fbcea1445a802002b3b80cc2918192813307cf0ee584b38739511d465b30360113f288956f0d7a',
+		serviceProvider: 'dimension1',
+		networkDomain: 'dimension2',
+		networkType: 'dimension3',
+	});	
+</script>
 
 
 
 <link rel="icon" type="image/png" href="favicon.png" />
-<title>Joao Paulo Valente</title> 
-<meta name="description" content="Joao Paulo Valente — Ph.D. candidate in Economics at Yale University."/>
+<title>Kaushik Vasudevan</title> 
+<meta name="description" content="Kaushik Vasudevan — Ph.D. candidate in Financial Economics at Yale University."/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 </head> 
-    <body>
-        <div id='site_body'>
-            <p style="font-size: min(4.5vmax, 28px); font-variant:normal;font-weight: 200; margin-bottom:10px; text-align:center">
-                Joao Paulo Valente
-            </p>
-            <hr/>
-            
-            <p style="text-align:center"><img src="picture.png" alt="Headshot"></p>
-         
-            <p class="header_text">I am a PhD candidate in Economics at Yale University. My research is in finance, with a focus on behavioral finance and asset pricing. I am also interested in international finance. 
-            Prior to my doctoral studies, I was a macroeconomic researcher at Bahia Asset Management.
-            I will be available for interviews at the 2022 ASSA Meeting. </p> 
-            <p class="header_text"><a class="link_main" href="JoaoPaulo_Valente_CV.pdf" target="_blank" onclick="getOutboundLink('JoaoPaulo_Valente_CV.pdf'); return true;">Curriculum Vitae</a> &#160; </p>
+	<body>
+		<div id='site_body'>
+			<p style="font-size: min(4.5vmax, 28px); font-variant:normal;font-weight: 200; margin-bottom:10px; text-align:center">
+				Kaushik Vasudevan
+			</p>
+			<hr/>
+			
+			<p style="text-align:center"><img src="picutre.png" alt="Headshot"></p>
+		 
+			<p class="header_text">I am a PhD candidate in Financial Economics at Yale University. Prior to my doctoral studies, I was a research associate in the Global Macro group at AQR Capital Management and studied Statistics and Economics at the University of Chicago. </p> 
+			<p class="header_text"><a class="link_main" href="cv.pdf" target="_blank" onclick="getOutboundLink('cv.pdf'); return true;">Curriculum Vitae</a> &#160; </p>
 
-         
-            <hr/>
-            <p class="section_header">
-                Working Papers
-            </p>
-     
-            <p class="body_text"> 
-                <b>The Role of Beliefs in Asset Prices: Evidence from Exchange Rates</b><br/>
-            (with Kaushik Vasudevan and Tianhao Wu)<br/>
-            <a class="link_main" href="javascript:unhide(&#39;abstract_exchange_rate&#39;);" id="abstract_exchange_rate_link">Abstract [+]</a> | <a class="link_main" href="papers/vvw_exchange_rate_expectations.pdf" target="_blank" onclick="getOutboundLink('papers/vvw_exchange_rate_expectations.pdf'); return true;">PDF</a> | <a class="link_main" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3872077" target="_blank" onclick="getOutboundLink('SSRN Exchange Rate Expectations'); return true;">SSRN</a>
-            <div id="abstract_exchange_rate" class="hidden">
-                Motivated by evidence of systematic forecast errors by market participants and professional forecasters, we construct a model of exchange rate determination where short-lived investors each (1) receive noisy private signals about the future path of interest rate differentials between the US and other countries and (2) overestimate the persistence of interest rate differentials. Our model is able to explain the forward premium puzzle, a well-known failure of the uncovered interest rate parity condition implied by traditional models (UIP), in a manner consistent with the survey evidence, in addition to a number of additional puzzles that existing models have struggled to simultaneously explain. These include the initial underreaction and delayed overreaction of currencies in response to monetary news; positive short-horizon and negative long-horizon autocorrelations of currency excess returns; and the lower return predictability of interest rate differentials for UIP trades implemented with longer maturity bonds. Our model is also useful for understanding the strong relationship between survey-based measures of macroeconomic news and exchange rates despite the weak relationship between macroeconomic fundamentals and exchange rates, the persistence of subjective beliefs, and the seeming reversal of the failure of UIP in recent years. Our results highlight the important role that investors’ beliefs may play in exchange rate behavior.           </div>
-            <br/>
-            
-            <p class="body_text"> 
-                <b>Tail Risk Exposures of Hedge Funds: Evidence From Unique Brazilian Data</b><br/>
-            (with Caio Almeida and Marcelo Fernandes)<br/>
-            <a class="link_main" href="javascript:unhide(&#39;abstract_tail_risk&#39;);" id="abstract_tail_risk_link">Abstract [+]</a> | <a class="link_main" href="papers/amv_tail_risk.pdf" target="_blank" onclick="getOutboundLink('papers/amv_tail_risk.pdf'); return true;">PDF</a> | <a class="link_main" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3386376" target="_blank" onclick="getOutboundLink('SSRN Tail Risk'); return true;">SSRN</a>
-            <div id="abstract_tail_risk" class="hidden">
-                This paper examines tail risk in the Brazilian hedge fund industry. We rely on a unique data set of daily returns for every hedge fund in Brazil, dead or alive. By employing the universe of hedge funds, we ensure the absence of selection, survivorship, and instant history biases. We estimate tail risk measures based on the cross-section of both equity and hedge-fund returns. We consider three tail risk measures. The first extracts a tail risk measure assuming that the tail of the cross-section distribution has a power law representation, whereas the second and third rely on the expected shortfall of the cross-section distribution under the physical and risk-neutral measures, respectively. We find that the tail risk estimates are very different not only across asset classes (equity vs hedge fund), but also across probability measures (physical vs risk neutral). More interestingly, we also show that, although the hedge fund industry in Brazil seems to exhibit more exposure to equity tail risk, hedge fund tail risk entails higher predictive ability to performance both over time and cross-sectionally.            </div>
-            <br/>        
-            <hr/>
-            <p class="section_header">
-                Contact
-            </p>
-            <p class="body_text">Email:<br/>joaopaulo.valente@yale.edu <br/><br/>
-                Mailing: <br/> Department of Economics, Yale University <br/> 28 Hillhouse Ave, New Haven, CT 06511.
-            </p>
-         
-        </div>
-    </body> 
+		 
+			<hr/>
+			<p class="section_header">
+				Working Papers
+			</p>
+	 
+			<p class="body_text"> 
+				<b>Beyond Basis Basics: Liquidity Demand and Deviations from the Law of One Price</b><br/>
+				(with Todd M. Hazelkorn and Tobias J. Moskowitz)<br/>
+				<i>Conditionally Accepted at the Journal of Finance</i><br/>
+				<a class="link_main" href="javascript:unhide(&#39;abstract_bbb&#39;);" id="abstract_bbb_link">Abstract [+]</a> | <a class="link_main" href="papers/hmv_bbb.pdf" target="_blank" onclick="getOutboundLink('papers/hmv_bbb.pdf'); return true;">PDF</a> | <a class="link_main" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3658560" target="_blank"  onclick="getOutboundLink('SSRN BBB'); return true;">SSRN</a> | <a class="link_main" href="https://www.nber.org/papers/w26773" target="_blank"   onclick="getOutboundLink('NBER BBB'); return true;">NBER WP #26773</a>
+			</p>
+			<div id="abstract_bbb" class="hidden">
+					We argue that deviations from the law of one price between futures and spot prices, known as futures-cash bases, capture important information about liquidity demand for equity market exposure in global markets. We show that bases (1) co-move with dealer and investor futures positions, (2) are contemporaneously positively correlated with spot and futures returns with the same sign, and (3) negatively predict futures and spot market returns with the same sign. These findings are consistent with a model where the futures-cash basis reflects liquidity demand that is common to futures and cash equity markets. We show persistent supply-demand imbalances for equity index exposure reflected in bases, where compensation for meeting that liquidity demand is large (5-6% annual premium).
+			</div>
+			<br/>
+			<p class="body_text"> 
+				<b>What Can Betting Markets Tell Us About Investor Preferences and Beliefs? Implications for Low Risk	
+				Anomalies</b><br/>
+			(with Tobias J. Moskowitz)<br/>
+			<a class="link_main" href="javascript:unhide(&#39;abstract_betting&#39;);" id="abstract_betting_link">Abstract [+]</a> | <a class="link_main" href="papers/mv_betting.pdf" target="_blank" onclick="getOutboundLink('papers/mv_betting.pdf'); return true;">PDF</a> | <a class="link_main" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3845505" target="_blank" onclick="getOutboundLink('SSRN Betting'); return true;">SSRN</a> 
+			</p>
+			<div id="abstract_betting" class="hidden">
+				An empirical puzzle in financial markets, known as the low-risk anomaly, is that riskier assets earn lower risk-adjusted returns than less risky assets. Theories for this phenomenon focus either on market frictions, such as leverage costs, or non-traditional preferences for lottery-like payoffs. We relate the low risk anomaly to the Favorite-Longshot Bias in betting markets, where returns to betting on riskier "longshots" are lower than returns to betting on "favorites," and provide novel evidence to both anomalies. Synthesizing the evidence, we study the joint implications from the two settings for a unifying explanation.  Rational theories of risk-averse investors with homogeneous beliefs cannot explain the cross-sectional relationship between diversifiable risk and return in betting markets. Rather, we appeal to models of non-traditional preferences or heterogeneous beliefs. We find that a model with reference-dependent preferences, featuring probability weighting and diminishing sensitivity, two features of Cumulative Prospect Theory, best fits the data, and is able to capture the choice and the amount to bet. Calibrated parameter values for probability weighting and diminishing sensitivity that capture financial markets facts can simultaneously explain the betting market facts. However, explaining the choice to bet is at odds with loss-aversion, a feature of Cumulative Prospect Theory often used in financial markets applications. 
+			</div>
+			<br/>
+			<p class="body_text"> 
+				<b>The Role of Beliefs in Asset Prices: Evidence from Exchange Rates</b><br/>
+			(with Joao Paulo Valente and Tianhao Wu)<br/>
+			<a class="link_main" href="javascript:unhide(&#39;abstract_exchange_rate&#39;);" id="abstract_exchange_rate_link">Abstract [+]</a> | <a class="link_main" href="papers/vvw_exchange_rate_expectations.pdf" target="_blank" onclick="getOutboundLink('papers/vvw_exchange_rate_expectations.pdf'); return true;">PDF</a> | <a class="link_main" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3872077" target="_blank" onclick="getOutboundLink('SSRN Exchange Rate Expectations'); return true;">SSRN</a>
+			<div id="abstract_exchange_rate" class="hidden">
+				Motivated by evidence of systematic forecast errors by market participants and professional forecasters, we construct a model of exchange rate determination where investors each (1) receive noisy private signals about the future path of interest rate differentials between the US and other countries and (2) overestimate the persistence of interest rate differentials. Our model is able to explain the forward premium puzzle, a well-known failure of the uncovered interest rate parity condition implied by traditional models (UIP), in a manner consistent with the survey evidence, in addition to a number of additional puzzles that existing models have struggled to simultaneously explain. These include the initial underreaction and delayed overreaction of currencies in response to monetary news; positive short-horizon and negative long-horizon autocorrelations of currency excess returns; and the lower return predictability of interest rate differentials for UIP trades implemented with longer maturity bonds. Our model is also useful for understanding the strong relationship between survey-based measures of macroeconomic news and exchange rates despite the weak relationship between macroeconomic fundamentals and exchange rates, the persistence of subjective beliefs, and the seeming reversal of the failure of UIP in recent years. Our results highlight the important role that investors' beliefs may play in explaining exchange rate behavior.			</div>
+			<br/>
+			
+			<p class="body_text"> 
+				<b>Getting Schooled: The Role of Universities in Attracting Immigrant Entrepreneurs</b><br/>
+				(with Natee Amornsiripanitch, Paul Gompers, and George Hu)<br/>
+				<a class="link_main" href="javascript:unhide(&#39;abstract_gs&#39;);" id="abstract_gs_link">Abstract [+]</a> | <a class="link_main" href="papers/aghv_immigrant_entrepreneurs.pdf" target="_blank" onclick="getOutboundLink('papers/aghv_immigrant'); return true;">PDF </a> | <a class="link_main" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3838408" target="_blank"  onclick="getOutboundLink('SSRN GS'); return true;">SSRN</a> | <a class="link_main" href="https://www.nber.org/papers/w28773" target="_blank"   onclick="getOutboundLink('NBER GS'); return true;">NBER WP #28773</a> 
+				<br/> <a class="link_main" href="https://corpgov.law.harvard.edu/2021/05/28/getting-schooled-the-role-of-universities-in-attracting-immigrant-entrepreneurs/" target="_blank" onclick="getOutboundLink('aghv_immigrant_hls'); return true;">HLS Governance Forum</a>
+			</p>
+			<div id="abstract_gs" class="hidden">
+				Immigrant founders of venture capital-backed companies have been critical to the entrepreneurial ecosystem. We document the channels through which immigrant founders find their way to the United States and how those channels have changed over time. Immigrants have been an important source of founders for venture capital-backed startups accounting for roughly 20% of all founders over the past 30 years. Immigrants coming to the United States for their education have been the primary source of founders with those coming after being educated abroad and then arriving for work decreasing in importance over time. The importance of undergraduate education as a channel for immigrant founders has increased over time. Immigrant founders coming for education are likely to start their companies in the state in which they were educated, especially states where they received their graduate education, leading to potentially large local economic benefits. The results of this paper have important policy implications for the supply of entrepreneurial talent and efforts to promote entrepreneurial ecosystems.
+			</div>
+			<br/>			
+			<hr/>
+			<p class="section_header">
+				Contact
+			</p>
+			<p class="body_text">Email:<br/>kaushik.vasudevan@yale.edu <br/><br/>
+				Mailing: <br/> Yale School of Management, PhD Suite <br/> 165 Whitney Avenue <br/> New Haven, CT 06511
+			</p>
+		 
+		</div>
+	</body> 
 </html>
